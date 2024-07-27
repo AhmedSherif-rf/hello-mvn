@@ -23,12 +23,12 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: copy arti into root dir 
-      run: cp target/jb-hello-world-maven-0.1.0.jar docker/hello.HelloWorld
-
     - name: check the arti
       run: ls -la target
-
+    
+    - name: copy arti into root dir 
+      run: cp target/jb-hello-world-maven-0.1.0.jar docker/hello.HelloWorld
+   
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
        
