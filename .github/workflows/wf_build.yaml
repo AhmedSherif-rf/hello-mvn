@@ -24,8 +24,7 @@ jobs:
       run: mvn clean install
 
     - name: copy arti into root dir 
-      run: cp target/logging-0.8.0.jar docker/logger.jar
-
+      run: cp target/jb-hello-world-maven-0.1.0.jar docker/hello.HelloWorld
 
     - name: check the arti
       run: ls -la target
